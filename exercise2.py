@@ -13,6 +13,10 @@ class Point2D:
     @property
     def y(self) -> float:
         return self._coordinates[1]
+    
+    def _isub_(self, other:Vector) -> Point2D:
+        self._coordinates = self._coordinates-other
+        return self
 
 
 def test_point_construction() -> None:
